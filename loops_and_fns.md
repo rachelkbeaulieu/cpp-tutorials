@@ -136,11 +136,12 @@ int factorial(int n) {
   * Structures - define a structure with the amount of integer values you want and store the variables into the structure
   * Arrays - (only works when items are the same type) an array needs to be passed as an argument and then whatever changes are made to the copy of the array, are changed in the original array as well
 
-### Pass-by-reference in C++
-* Pass-by-reference means to pass the reference of an argument in the calling function to the corresponding parameter of the called function
-  * The called function can modify the value of the argument by using the reference passed in
-* In C++, if you set a variable equal to another (e.g., x = y;), the variable will hold the same **storage location** as the other
-  * In otherwords, if you set x equal to y, and then change y, x will hold the **new** (and current) value of y since when they are referenced, they are both going to the same storage location
+### Pass-by-value vs. pass-by-reference in C++
+* Pass-by-value means to copy the actual value of an argument into a parameter, but when changes are made to the original value, it has no effect on the copied value
+* Pass-by-reference means to copy the actual value of an argument into a parameter, but when changes are made to the original value, the copied value **does change** to match the updated original value 
+  * This change occurs because the **storage location** is what is given to the copied value, rather than what is stored there -- when you update what is stored, everything pointing to it will have the same value
+* C++ by default uses pass-by-value arguments, but can be modified to use pass-by-reference
+* To make C++ produce pass-by-reference, modify the function declaration to be `void passbyref(int &x, int &y)` rather than `void passbyval(int x, int y)`
 
 
 
