@@ -19,21 +19,20 @@
 #### Method and function names
 * Be explicit about what a function or method is doing (e.g., `PrintName()` rather than `Print()`)
 
-
 #### Class attribute names
 * Private attribute names should begin with a lowercase `m` (e.g., private: int mCatAge)
 * The `m` comes before other name modifiers like `p` for pointer (e.g., *mpName)
-
 
 #### Variable names
 * Lowercase letters only
 * Underscore `_` is used as the word separator (e.g., cat_in_the_hat)
 
 ## Standard method functions
-
+* I didn't find much specifically about standard method functions that are used in C++ and in other programming languages (like toString() in Java)
+* Since I didn't find much with doing a lot of digging, I'm going off the assumption that C++ norms are more "if you need it, you'll make it", rather than having a `toString()` function by (essentially) default
 
 ## Inheritance
-
+* 
 
 ### Overloading methods
 
@@ -41,3 +40,4 @@
 ## Sources
 1. https://www.section.io/engineering-education/getting-started-with-classes-and-objects-in-c++/
 2. https://www.w3schools.com/cpp/cpp_classes.asp
+3. https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm
