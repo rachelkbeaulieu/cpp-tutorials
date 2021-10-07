@@ -27,17 +27,25 @@
 * Lowercase letters only
 * Underscore `_` is used as the word separator (e.g., cat_in_the_hat)
 
-## Standard method functions
-* I didn't find much specifically about standard method functions that are used in C++ and in other programming languages (like toString() in Java)
+## Standard methods functions
+* I didn't find much specifically about standards method functions that are used in C++ and in other programming languages (like toString() in Java)
 * Since I didn't find much with doing a lot of digging, I'm going off the assumption that C++ norms are more "if you need it, you'll make it", rather than having a `toString()` function by (essentially) default
 
 ## Inheritance
-* 
+* Inheritance allows a programmer to define a class inb terms of another class, without having to duplicate code (reusing code is rad!)
+* The exisiting class is referred to the **base** class, and the new class is the **derived** class
+* Inheritance implements an "is a" relationship, such that a dog **is a** mammal
+* To inherit in C++, you create a derived class by defining the derived class name along with the base class: `class Potato: public Vegetable { }`
+* C++ has access control, where **public** variables can be seen by anyone, **protected** can be seen by derived class(es), and **private** variables can be seen only by the class it is in
+* C++ can inherit from more than one class
+ * This can be done by adding a comma separator such as: `class Potato: public Recipe, public Vegetable { }`
 
 ### Overloading methods
+* In C++, if there is a function within the base class and the derived class with the same name, the base class function **will not** be used; only the derived function will, as C++ will look in the derived class for the function, find it, and use that one without looking at the base class function
 
 
 ## Sources
 1. https://www.section.io/engineering-education/getting-started-with-classes-and-objects-in-c++/
 2. https://www.w3schools.com/cpp/cpp_classes.asp
 3. https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm
+4. https://chaste.cs.ox.ac.uk/trac/raw-attachment/wiki/CodingStandardsStrategy/codingStandards.pdf
